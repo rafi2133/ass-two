@@ -90,7 +90,7 @@ nav{
 }
 
 /* Banner er khel hobe  */
-
+/* j j ghamela gelo re  */
 .banner{
     max-width: 1600px;
     width: 100%;
@@ -127,7 +127,6 @@ nav{
     width: 350px;
     position: relative;
 }
-
 .mic{
      position: absolute;
     top: 150px;
@@ -154,7 +153,6 @@ nav{
     transform: translateX(-50%); 
     
 }
-
 .badge:hover{
     background-color: antiquewhite;
 }
