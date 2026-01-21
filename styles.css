@@ -228,8 +228,6 @@ main{
    justify-content: center;
    align-items: center;
    border-bottom: 2px solid #341758;
-
-
 }
 .about-title{
     font-weight: 700;
@@ -239,23 +237,27 @@ main{
 
 .about-text{
      text-align: center;
+     margin-bottom: 80px;
    
 }
 
 .about-number{
-    padding-left: 50px;
-   display: grid;
-   grid-template-columns: repeat(4, 1fr); 
-   text-align: center;
-    margin-bottom: 40px;
+   
+    margin-bottom: 120px; 
+    display: flex;
+    justify-content: center;
+}
+.about-number-div1,
+.about-number-div2{
+    display: flex;
 }
 
 .number-card{
     padding-top: 80px;
     width: 240px;
     height: 94px;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+   
 }
 .number-card h1{
     color: #00FF88;
@@ -463,15 +465,15 @@ footer div{
  margin-bottom: 120px;
 }
 
+#footer-gap{
+  margin-right: 40px;
+}
 
 
 /* Responsive Area For 576px */
 
 @media screen and (max-width:576px){
-  body{
-    overflow-x: hidden;
-  }
-
+  
     nav {
     max-width: 1600px;
     /* height: 60px; */
@@ -480,8 +482,6 @@ footer div{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
-    
 }
 
 
@@ -528,6 +528,7 @@ footer div{
         border-top: 1px solid #2A186C;
     }
      .nav-toggle-ul{
+        list-style: none;
         flex-direction: column;
         gap: 16px;
         padding: 0;
@@ -544,7 +545,6 @@ footer div{
     }
     
     .banner{
-       
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -627,16 +627,15 @@ footer div{
 
 
 .about{
-    
     width: 100%;
-   
     display: flex;
     align-items: center;
     
 }
 .about-content{
-    width: 400px;
-    height: 207px;
+    max-width: 400px;
+   
+   
 }
  .about-title {
     margin-top:40px ;
@@ -647,24 +646,23 @@ footer div{
 .about-text{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 .about-title{
     margin-top: 10px;
 }
+.about-number{
+    max-width: 400px;
+
+}
 .about-number {
-    max-width: 440px;
-    width: 100%;
-   margin-left: 0px;
-  padding-left: 0px;
-  grid-template-columns: repeat(2, 190px);
-  
-  
+     flex-direction: column;
     
 }
 .why-choose{
      width: 100%;
     display: flex;
-  
+    overflow-x: hidden;
     
 }
 .why-choose-title{
@@ -689,6 +687,7 @@ footer div{
     width: 100%;
 
 }
+
 
 .feature-container {
     flex-direction: column;
@@ -715,6 +714,7 @@ footer div{
     margin-bottom: 24px;
 }
 footer{
+    overflow-x: hidden;
     background-image: url(assets/responsive-footer.png);
     background-position: center center;
     
@@ -726,5 +726,8 @@ footer{
 footer ul{
    display: flex; 
    flex-direction: column;
+}
+#footer-gap{
+    margin-right: 10px;
 }
 }
