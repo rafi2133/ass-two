@@ -269,7 +269,7 @@ main{
     width:100%;
     max-width: 1600px;
     background-color: #230E3D;
-     justify-content: center;
+    justify-content: center;
      align-items: center;
 }
 .why-choose-title{
@@ -281,6 +281,7 @@ main{
 .why-choose-container{
     max-width: 1200px;
     width: 100%;
+    margin-bottom: 120px;
    
 }
 .why-card{
@@ -323,6 +324,79 @@ main{
                         
     
     ;
+}
+
+.feature{
+    margin: 0 auto;
+    max-width: 1600px;
+    background-color: #1A0B2E ;
+    display: flex;
+    flex-direction: column;
+    
+}
+.feature-title{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.feature-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    gap: 30px;
+    
+}
+
+.feature-card{
+    max-width: 380px;
+    width: 100%;
+    background-color: #250D44;
+    border-radius: 20px;
+}
+.feature-card h3{
+      font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.feature-card h4{
+    color: #00FF88;
+}
+.frame{
+ border-radius: 20px; 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.host-container{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 120px;
+    align-items: center;
+}
+
+.host-doc h3{
+     font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+}
+.host-icon{
+    display: flex;
+    gap: 8px;
+
+}
+.host-icon-img{
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #533C72;
 }
 
 /* Main ses*/
