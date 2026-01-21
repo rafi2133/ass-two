@@ -339,12 +339,12 @@ main{
     font-size: 3rem;
     text-align: center;
     color: white;
+    margin-top: 120px;
     margin-bottom: 40px;
 }
 .feature-container{
     display: flex;
     justify-content: center;
-    margin-bottom: 120px;
     gap: 30px;
     
 }
@@ -382,22 +382,24 @@ main{
 
 .host-doc h3{
      font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: white;
 }
 .host-icon{
     display: flex;
     gap: 8px;
+    text-align: center;
 
 }
 .host-icon-img{
-    padding: 10px;
+    display: inline-flex;
     width: 40px;
     height: 40px;
+    padding: 10px;
     border-radius: 50%;
-    object-fit: cover;
     border: 1px solid #533C72;
 }
+
 
 /* Main ses*/
 
@@ -592,16 +594,37 @@ main{
     
 }
 .why-choose-title{
-    margin-top: 10px;
+    width: 380px;
+    margin-top: 40px;
     text-align: center;
+    font-size: 2rem;
 }
 .why-choose-container{
-   
+   gap: 30px;
    display: flex;
    flex-direction: column;
+   align-items: center;
 }
 .why-card{
+    width: 400px;
     padding-top: 20px;
     padding-left: 20px;
+}
+
+.feature-container {
+    flex-direction: column;
+   align-items: center; 
+}
+.feature-title{
+   margin-top: 20px;
+}
+.host-container {
+    flex-direction: column;
+}
+.host-doc{
+    text-align: center;
+}
+.host-icon {
+    justify-content: center;
 }
 }
