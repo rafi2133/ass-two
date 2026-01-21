@@ -25,7 +25,7 @@
 .common-p{
    font-weight: 400;
    font-size: 1rem;
-   color: white; 
+   color: rgba(255, 255, 255, 0.80); 
 }
 /* General styles */
 
@@ -81,6 +81,7 @@ nav{
     
     height: 40px;
     cursor: pointer;
+    margin-left: auto;
     margin-right: 120px;
 }
 
@@ -226,6 +227,8 @@ main{
     text-align: center;
    justify-content: center;
    align-items: center;
+   border-bottom: 2px solid #341758;
+
 
 }
 .about-title{
@@ -244,7 +247,6 @@ main{
    display: grid;
    grid-template-columns: repeat(4, 1fr); 
    text-align: center;
-   border-top: 2px solid #341758;
     margin-bottom: 40px;
 }
 
@@ -282,12 +284,10 @@ main{
     max-width: 1200px;
     width: 100%;
     margin-bottom: 120px;
-   
 }
 .why-card{
-
-    padding-top: 112px;
-    padding-left: 45px;
+    padding: 40px;
+    gap:16px ;
     border-radius: 40px;
     background-color: rgba(53, 17, 101, 0.4);
    
@@ -301,6 +301,7 @@ main{
 }
 
 .hp{
+  padding-top: 112px;
   grid-area: hp;  
 }
 .dvc{
@@ -317,7 +318,7 @@ main{
 }
 .why-choose-container{
     display: grid;
-    gap: 10px;
+    gap: 30px;
     grid-template-areas: "hp dvc dvc"
                         "hp ltn ltn"
                         "exc exc res"
@@ -355,6 +356,9 @@ main{
     background-color: #250D44;
     border-radius: 20px;
 }
+.frame-content{
+    margin-left: 24px;
+}
 .feature-card h3{
       font-weight: 700;
     font-size: 1.25rem;
@@ -362,6 +366,8 @@ main{
 }
 
 .feature-card h4{
+    gap: 8px;
+    display: inline-flex;
     color: #00FF88;
 }
 .frame{
@@ -376,7 +382,7 @@ main{
     width: 100%;
     display: flex;
     gap: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 120px; 
     align-items: center;
 }
 
@@ -392,30 +398,85 @@ main{
 
 }
 .host-icon-img{
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid #533C72;
+    border: 2px solid #533C72;
 }
 
 
 /* Main ses*/
 
+footer{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+    text-align: center;
+    background-image: url(assets/footer-bg.png);
+    background-position: center center;
+}
+.footer-logo{
+    margin-top: 100px;
+    margin-bottom: 32px;
+   color: white;
+   font-weight: 700;
+   font-size: 5rem;
+}
+footer ul{
+    gap: 40px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
 
+footer ul li{
+    display: inline-flex;
+    gap:8px ;
+    color: white;
+}
 
+.footer-bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    z-index: 1;
+}
+
+footer div{
+/* position: relative; */
+ z-index: 5;
+ top: -330px;
+}
+
+.footer-p{
+ margin-bottom: 120px;
+}
 
 
 
 /* Responsive Area For 576px */
 
 @media screen and (max-width:576px){
-  
+  body{
+    overflow-x: hidden;
+  }
 
     nav {
     max-width: 1600px;
-    height: 60px;
+    /* height: 60px; */
+    height: auto;
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -443,29 +504,36 @@ main{
     }
     .logo{
         margin-left: 20px;
+        font-size: 1.5rem;
     }
     .hamburger-icon{
         cursor: pointer;
        display: block; 
        margin-left: auto;
-        margin-right: 20px; 
+        margin-right: 20px;
        
 
     }
-    .nav-toggle-ul{
-        list-style: none;
-        color: white;
-      
-    }
+   
   
     .responsive-menu{
-        cursor: pointer;
-        position:absolute;
-       background-color: #471786;
-        border: 1px solid black;
-        top: 67px;
-        right: 28px;
+         position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 16px;
+        background-color: #471786;
+        border-top: 1px solid #2A186C;
     }
+     .nav-toggle-ul{
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+      
+    }
+
     .mobile-btn{
         background: linear-gradient(to top right, rgb(247, 232, 63), rgba(251, 9, 178, 0.596),rgba(145, 0, 248, 1));
     color: white;
@@ -584,7 +652,13 @@ main{
     margin-top: 10px;
 }
 .about-number {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 440px;
+    width: 100%;
+   margin-left: 0px;
+  padding-left: 0px;
+  grid-template-columns: repeat(2, 190px);
+  
+  
     
 }
 .why-choose{
@@ -600,15 +674,20 @@ main{
     font-size: 2rem;
 }
 .why-choose-container{
+    max-width: 300px;
+    width: 100%;
    gap: 30px;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
 .why-card{
-    width: 400px;
-    padding-top: 20px;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 400px;
+    width: 100%;
+
 }
 
 .feature-container {
@@ -619,12 +698,33 @@ main{
    margin-top: 20px;
 }
 .host-container {
+    width: 380px;
+    border-radius: 20px;
+    background-color: rgba(53, 17, 101, 0.4);
     flex-direction: column;
+    margin-bottom: 40px; 
+}
+.host-pic{
+    margin-top: 24px;
 }
 .host-doc{
     text-align: center;
 }
 .host-icon {
     justify-content: center;
+    margin-bottom: 24px;
+}
+footer{
+    background-image: url(assets/responsive-footer.png);
+    background-position: center center;
+    
+}
+
+.footer-logo{
+   margin: 40px;
+}
+footer ul{
+   display: flex; 
+   flex-direction: column;
 }
 }
